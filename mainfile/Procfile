@@ -1,4 +1,4 @@
-web: gunicorn mainfile.wsgi
-release: python manage.py makemigration --noinput
+web: gunicorn loginapi.wsgi
+release: python manage.py makemigrations --noinput
 release: python manage.py collectstatic --noinput
 release: python manage.py migrate --noinput
