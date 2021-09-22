@@ -5,8 +5,6 @@ class Profile(models.Model):
     title = models.CharField(max_length=100)
     email = models.EmailField()
     age = models.IntegerField()
-    images = models.ImageField('images/')
-
 
     def __str__(self):
         return self.title
