@@ -8,11 +8,11 @@ from rest_framework import status
 from . models import News
 from rest_framework import mixins
 from rest_framework.views import APIView
-from rest_framework import generic
+from rest_framework import generics
 from . serializers import NewsSerializer
 
 
-class NewsAPIView(generic.GenericAPIView, mixins.CreateModelMixin, mixins.DestroyModelMixin, mixins.ListModelMixin, mixins.RetrieveModelMixin):
+class NewsAPIView(generics.GenericAPIView, mixins.CreateModelMixin, mixins.DestroyModelMixin, mixins.ListModelMixin, mixins.RetrieveModelMixin):
     serializer_class = NewsSerializer
     queryset = News.objects.all()
    
