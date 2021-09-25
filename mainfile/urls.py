@@ -22,11 +22,11 @@ from drf_yasg import openapi
 
 schema_view = get_schema_view(
    openapi.Info(
-      title="Profile Api",
+      title="News Api",
       default_version='v1',
-      description="User Profile Api",
+      description="News Api",
       terms_of_service="https://www.google.com/policies/terms/",
-      contact=openapi.Contact(email="contact@snippets.local"),
+      contact=openapi.Contact(email="davidoiwajomo@gmail.com"),
       license=openapi.License(name="BSD License"),
    ),
    public=True,

@@ -1,10 +1,10 @@
 from django.db.models import fields 
 from rest_framework import serializers
-from .models import Profile
+from .models import News
 
 
-class ProfileSerializer(serializers.ModelSerializer):
+class NewsSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Profile
-        fields = ['id','title','email','age','images']
+        model = News
+        fields = ['id','title','images','description','date']
         

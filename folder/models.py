@@ -1,11 +1,11 @@
 from django.db import models
 
 # Create your models here.
-class Profile(models.Model):
+class News(models.Model):
     title = models.CharField(max_length=100)
-    email = models.EmailField()
-    age = models.IntegerField()
     images = models.ImageField('images/')
+    date = models.DateField()
+    description = models.TextField(max_length=10000)
 
 
     def __str__(self):

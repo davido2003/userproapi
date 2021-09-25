@@ -1,9 +1,9 @@
 from django.urls import path
-from .views import ProfileAPIView
+from .views import NewsAPIView
 
 urlpatterns = [
-    path('generic/<int:id>/', ProfileAPIView.as_view()),
-    path('generic/', ProfileAPIView.as_view())
+    path('News/<int:id>/', NewsAPIView.as_view()),
+    path('News/', NewsAPIView.as_view())
     #path('profile/', profile_list),
    # path('detail/<int:pk>/', profile_detail)
 ]
