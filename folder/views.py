@@ -10,15 +10,12 @@ from rest_framework import mixins
 from rest_framework.views import APIView
 from rest_framework import generics
 from . serializers import ProfileSerializer
-from rest_framework.authentication import SessionAuthentication, BasicAuthentication, TokenAuthentication
-from rest_framework.permissions import IsAuthenticated
 
 
 class ProfileAPIView(generics.GenericAPIView, mixins.CreateModelMixin, mixins.DestroyModelMixin, mixins.ListModelMixin, mixins.RetrieveModelMixin):
     serializer_class = ProfileSerializer
     queryset = Profile.objects.all()
-    authentication_classes = [SessionAuthentication, BasicAuthentication, TokenAuthentication]
-    permission_classes = [IsAuthenticated]
+    
     lookup_field = 'id'
     def get(self, request, id=None):         
         if id:
