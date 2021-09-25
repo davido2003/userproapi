@@ -143,8 +143,4 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-<<<<<<< HEAD
-django_heroku.settings(local())
-=======
 django_heroku.settings(locals())
->>>>>>> d9076ffac8f4b376932b155bde6b345978a15bf6

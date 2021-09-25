@@ -8,8 +8,7 @@ from rest_framework import status
 from . models import News
 from rest_framework import mixins
 from rest_framework.views import APIView
-from rest_framework import generics
-<<<<<<< HEAD
+from rest_framework import generic
 from . serializers import NewsSerializer
 
 
@@ -17,7 +16,7 @@ class NewsAPIView(generics.GenericAPIView, mixins.CreateModelMixin, mixins.Destr
     serializer_class = NewsSerializer
     queryset = News.objects.all()
    
-=======
+
 from . serializers import ProfileSerializer
 
 

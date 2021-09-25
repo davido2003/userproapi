@@ -18,22 +18,6 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework import permissions
 
-<<<<<<< HEAD
-schema_view = get_schema_view(
-   openapi.Info(
-      title="News Api",
-      default_version='v1',
-      description="News Api",
-      terms_of_service="https://www.google.com/policies/terms/",
-      contact=openapi.Contact(email="davidoiwajomo@gmail.com"),
-      license=openapi.License(name="BSD License"),
-   ),
-   public=True,
-   permission_classes=(permissions.AllowAny,),
-)
-=======
->>>>>>> d9076ffac8f4b376932b155bde6b345978a15bf6
-
 urlpatterns = [
     path('', include('folder.urls')),
     path('admin/', admin.site.urls),
