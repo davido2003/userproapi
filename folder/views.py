@@ -16,13 +16,6 @@ class NewsAPIView(generics.GenericAPIView, mixins.CreateModelMixin, mixins.Destr
     serializer_class = NewsSerializer
     queryset = News.objects.all()
    
-
-from . serializers import ProfileSerializer
-
-
-class ProfileAPIView(generics.GenericAPIView, mixins.CreateModelMixin, mixins.DestroyModelMixin, mixins.ListModelMixin, mixins.RetrieveModelMixin):
-    serializer_class = ProfileSerializer
-    queryset = Profile.objects.all()
     
     lookup_field = 'id'
     def get(self, request, id=None):         
