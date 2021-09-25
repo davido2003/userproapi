@@ -12,7 +12,7 @@ from rest_framework import generic
 from . serializers import NewsSerializer
 
 
-class NewsAPIView(generics.GenericAPIView, mixins.CreateModelMixin, mixins.DestroyModelMixin, mixins.ListModelMixin, mixins.RetrieveModelMixin):
+class NewsAPIView(generic.GenericAPIView, mixins.CreateModelMixin, mixins.DestroyModelMixin, mixins.ListModelMixin, mixins.RetrieveModelMixin):
     serializer_class = NewsSerializer
     queryset = News.objects.all()
    
@@ -24,7 +24,6 @@ class ProfileAPIView(generics.GenericAPIView, mixins.CreateModelMixin, mixins.De
     serializer_class = ProfileSerializer
     queryset = Profile.objects.all()
     
->>>>>>> d9076ffac8f4b376932b155bde6b345978a15bf6
     lookup_field = 'id'
     def get(self, request, id=None):         
         if id:
